@@ -4,8 +4,7 @@ Import-Module "$scriptDirectory\GitStatusCachePoshClient.psm1"
 Remove-GitStatusCache
 Remove-Module "GitStatusCachePoshClient"
 
-if((Test-Path $PROFILE) -and ((Get-Content $profile) -ne $null))
-{
+if ((Test-Path $PROFILE) -and ((Get-Content $profile) -ne $null)) {
     Write-Host -ForegroundColor Green 'Removing git-status-cache-posh-client from $PROFILE.'
     $firstProfileLine = '# Import git-status-cache-posh-client'
     $secondProfileLine = [RegEx]::Escape("Import-Module '$scriptDirectory\GitStatusCachePoshClient.psm1'")

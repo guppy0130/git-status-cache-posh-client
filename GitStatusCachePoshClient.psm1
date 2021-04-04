@@ -1,7 +1,6 @@
 if (Get-Module GitStatusCachePoshClient) { return }
 
-if (-not (Get-Module Microsoft.Powershell.Utility))
-{
+if (-not (Get-Module Microsoft.Powershell.Utility)) {
 	Import-Module Microsoft.Powershell.Utility
 }
 
